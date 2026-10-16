@@ -1,0 +1,37 @@
+{
+    "version": "2026-09-19-2324",
+    "description": "Roguelike in a post-apocalyptic world (with sprite-based graphics, release candidate)",
+    "homepage": "https://cataclysmdda.org",
+    "license": "CC-BY-SA-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/CleverRaven/Cataclysm-DDA/releases/download/cdda-0.I-2026-09-19-2324/cdda-windows-with-graphics-and-sounds-x64-2026-09-19-2324.zip",
+            "hash": "35eef993e969a5dfa08019d43b95944fc5fd4299a962a8e7e62580163175f7aa"
+        }
+    },
+    "shortcuts": [
+        [
+            "cataclysm-tiles.exe",
+            "Cataclysm DDA\\Cataclysm DDA Tiles (Pre-release)"
+        ]
+    ],
+    "persist": [
+        "config",
+        "save",
+        "sound",
+        "templates",
+        "font"
+    ],
+    "checkver": {
+        "url": "https://github.com/CleverRaven/Cataclysm-DDA/releases?q=0.I+release+candidate",
+        "regex": "releases/tag/cdda-0\\.I-(?<version>\\d{4}-\\d{2}-\\d{2}-\\d{4})"
+    },
+    "autoupdate": {
+        "url": "https://github.com/CleverRaven/Cataclysm-DDA/releases/download/cdda-0.I-$version/cdda-windows-with-graphics-and-sounds-x64-$version.zip",
+        "hash": {
+            "url": "https://api.github.com/repos/CleverRaven/Cataclysm-DDA/releases/tags/cdda-0.I-$version",
+            "jsonpath": "$.assets[?(@.name == '$basename')].digest",
+            "regex": "sha256:$sha256"
+        }
+    }
+}
