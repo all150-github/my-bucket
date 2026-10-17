@@ -3,7 +3,10 @@
     "description": "Continuation of the dnSpy project, a .NET debugger and assembly editor.",
     "homepage": "https://github.com/dnSpyEx/dnSpy",
     "license": "GPL-3.0-or-later",
-    "extract_to": ["x64", "x86"],
+    "extract_to": [
+        "x64",
+        "x86"
+    ],
     "architecture": {
         "64bit": {
             "url": [
@@ -15,16 +18,27 @@
                 "6ec1271aabb6503985e4d6299b0929aaa72f995a17a68d3233d5a3363092cdca"
             ],
             "bin": [
-                ["x64/dnSpy.Console.exe", "dnSpy.Console-x64"],
-                ["x86/dnSpy.Console.exe", "dnSpy.Console-x86"]
+                [
+                    "x64/dnSpy.Console.exe",
+                    "dnSpy.Console-x64"
+                ],
+                [
+                    "x86/dnSpy.Console.exe",
+                    "dnSpy.Console-x86"
+                ]
             ],
             "shortcuts": [
-                ["x64/dnSpy.exe", "dnSpy-x64"],
-                ["x86/dnSpy.exe", "dnSpy-x86"]
+                [
+                    "x64/dnSpy.exe",
+                    "dnSpy-x64"
+                ],
+                [
+                    "x86/dnSpy.exe",
+                    "dnSpy-x86"
+                ]
             ]
         }
     },
-
     "checkver": {
         "url": "https://api.github.com/repos/dnSpyEx/dnSpy/releases/latest",
         "jsonpath": "$.tag_name",

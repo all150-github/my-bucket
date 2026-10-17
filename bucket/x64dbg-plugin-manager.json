@@ -1,0 +1,22 @@
+{
+    "version": "0.05",
+    "homepage": "https://github.com/horsicq/x64dbg-Plugin-Manager",
+    "license": "MIT",
+    "url": "https://github.com/horsicq/x64dbg-Plugin-Manager/releases/download/0.06/x64plgmnr_win32_portable_0.06.zip",
+    "hash": "bf71d051b267bd9152a2de6affdcc5dbdfc52ac8def78d945fe454a92ac447bc",
+    "bin": "x64plgmnr.exe",
+    "shortcuts": [
+        [
+            "x64plgmnr.exe",
+            "x64plgmnr"
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "url": "https://api.github.com/repos/horsicq/x64dbg-Plugin-Manager/releases/latest",
+        "jsonpath": "$.tag_name"
+    },
+    "autoupdate": {
+        "url": "https://github.com/horsicq/x64dbg-Plugin-Manager/releases/download/$version/x64plgmnr_win32_portable_$version.zip"
+    }
+}
