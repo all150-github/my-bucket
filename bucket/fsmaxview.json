@@ -1,0 +1,26 @@
+{
+    "version": "3.5",
+    "description": "A fast, compact and innovative image viewer with archive support, comic book support and practical tools for viewing, rotating, resizing, cropping, annotating and printing images.",
+    "homepage": "https://www.faststone.org/FSMaxViewDetail.htm",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://www.faststone.org/order.htm"
+    },
+    "url": "https://www.faststonesoft.net/DN/FSMaxView35.zip",
+    "hash": "a73ec23756f9c77aec74cdf46de244eb10877a7598863cf8e50d2c8d514eaa80",
+    "extract_dir": "FSMaxView35",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\FSMVSettings.db\")) { New-Item \"$dir\\FSMVSettings.db\" | Out-Null }",
+    "bin": "MaxView.exe",
+    "shortcuts": [
+        [
+            "MaxView.exe",
+            "FastStone MaxView"
+        ]
+    ],
+    "persist": "FSMVSettings.db",
+    "checkver": "Version\\s+([\\d.]+)",
+    "autoupdate": {
+        "url": "https://www.faststonesoft.net/DN/FSMaxView$cleanVersion.zip",
+        "extract_dir": "FSMaxView$cleanVersion"
+    }
+}
